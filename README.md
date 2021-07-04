@@ -1,5 +1,5 @@
 # My Dictionary with Cat😺
-
+https://user-images.githubusercontent.com/60069112/124375227-1baa6600-dcdc-11eb-8b28-791b2b15b34e.mp4    
 aws s3 호스팅 주소: http://dictionary123.s3-website.ap-northeast-2.amazonaws.com/
 
 기능: 사전 전체 목록 보이기, 사전 추가, 사전 편집.    
