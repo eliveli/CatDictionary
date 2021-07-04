@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from 'react';
+import { Route } from "react-router-dom";
+import { useDispatch } from 'react-redux';
+import Add from "./Add";
+import Edit from "./Edit";
+import Home from "./Home";
+import { loadDictFB } from './redux/modules/dict';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = () => {
+  
+  const dispatch = useDispatch();
+  useEffect(()=> {
+    document.body.style.margin = 0;
+    document.body.style.backgroundColor= "#000033";
+    dispatch(loadDictFB());
+   }, [] )
+
+    return (
+      <div>
+        <Route path="/" exact component={Home} />
+        <Route path="/add" component={Add} />
+        <Route path="/edit/:id" component={Edit} />
+      </div>
+      );
+    }
 
 export default App;
